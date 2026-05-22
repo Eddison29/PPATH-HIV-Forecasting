@@ -50,7 +50,7 @@ with col_map:
         zoom=4.5, center={"lat": 12.8797, "lon": 121.7740}, opacity=0.7
     )
     fig_map.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-   event = st.plotly_chart(fig_map, use_container_width=True, on_select="rerun", key="main_geo_map")
+    event = st.plotly_chart(fig_map, use_container_width=True, on_select="rerun", key="main_geo_map")
     
     if event and event["selection"]["points"]:
         st.session_state.selected_region = event["selection"]["points"][0]["location"]
